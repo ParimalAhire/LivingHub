@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Listings</title>
+    <link rel="stylesheet" href="style.css">
+<body>
+    <header>
+        <nav>
+            <div class="logo">LivingHub</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hostelListing.html">Hostels</a></li>
+                <li><a href="messListing.html">Mess</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="search-filter">
+            <div class="search-bar">
+                <input type="text" id="search-bar" onkeyup="filterHostels()" placeholder="Search hostels...">
+            </div>
+        </section>
+
+        <section class="facilities-listing">
+            <!-- Hostel Listing Cards -->
+            <div class="facility">
+                <img src="assets/hostel1.jpg" alt="DNYANRAJ BOYS HOSTEL">
+                <h3>Dnyanraj Boys Hostel</h3>
+                <p>WiFi, 3 students per 2 rooms, mess on the ground floor</p>
+                <p></p>
+                <button>View Details</button>
+            </div>
+            <div class="facility">
+                <img src="assets/hostel2.jpg" alt="Jai Boys Hostel">
+                <h3>Jai Boys Hostel</h3>
+                <p>WiFi, washing machine, 24 hr RO water, study table, hot water</p>
+                <p></p>
+                <button>View Details</button>
+            </div>
+            <div class="facility">
+                <img src="assets/hostel3.jpg" alt="Rajmata Girls Hostel">
+                <h3>Rajmata Girls Hostel</h3>
+                <p>High-speed WiFi, comfortable beds, clean drinking water</p>
+                <p></p>
+                <button>View Details</button>
+            </div>
+            <!-- Add more hostel listings as needed -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 LivingHub. All rights reserved.</p>
+        <p>
+            <a href="privacy-policy.html">Privacy Policy</a> |
+            <a href="terms-of-service.html">Terms of Service</a> |
+            <a href="contact.html">Contact Us</a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
