@@ -63,6 +63,21 @@ a:hover {
     cursor: default;
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px 20px;
+    color: #333;
+}
+
+.hamburger span {
+    height: 3px;
+    background: #000; 
+    margin: 4px 0;
+    width: 25px;
+}
+
 /* General section styling */
 section {
     padding: 40px 80px;
@@ -111,6 +126,7 @@ section p, section h2 {
 .site-info p {
     padding: 0 4rem;
 }
+
 
 /* Featured Hostel and Mess Section */
 /* .facilities-container {
@@ -215,10 +231,10 @@ section p, section h2 {
 }
 
 .review-container {
-    padding: 0 9rem;
+    padding: 0 2rem; 
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: space-between; 
+    flex-wrap: wrap; 
 }
 
 .review {
@@ -226,14 +242,12 @@ section p, section h2 {
     border: 1px solid #555;
     border-radius: 8px;
     padding: 1rem;
-    margin: 1rem;
-    width: calc(33% - 2rem);
+    margin: 1rem 0; 
+    flex: 1 1 calc(30% - 2rem); 
+    max-width: calc(30% - 2rem); 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1 1 calc(33% - 2rem); 
-    height: 20vh;
     border-radius: 1.5rem;
 }
-
 
 .user-info {
     display: flex;
@@ -263,6 +277,7 @@ section p, section h2 {
     justify-content: space-between;
     background-color: #e6eff7;
     margin: 0 6rem;
+    padding: 0;
 }
 
 .how-it-works, .faq {
@@ -278,9 +293,11 @@ section p, section h2 {
 /* Contact Section */
 #contact {
     text-align: center;
-    margin: 5vh 60vb;
+    margin: 5vh auto; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    
+    align-items: center;
+    padding-top: 3vh;
+    width: 50%;
 }
 
 #contact .btn-container {
@@ -292,6 +309,7 @@ section p, section h2 {
     overflow: hidden;
     transition: max-height 0.5s ease, padding 0.5s ease;
     padding: 0;
+    margin-top: 1rem; 
 }
 
 .form-container.open {
@@ -309,9 +327,10 @@ form {
 .form-group {
     display: flex;
     flex-direction: column;
-    width: 80%;
-    max-width: 500px;
+    width: 100%;
+    max-width: 400px; 
     text-align: left;
+    margin: 0 auto; 
 }
 
 label {
@@ -334,8 +353,9 @@ input:focus, textarea:focus {
 
 button[type="submit"] {
     margin-top: 1rem;
-    width: 80%;
+    width: 100%; 
     max-width: 200px;
+    margin: 0 auto; 
 }
 
 a, .btn {
@@ -463,3 +483,42 @@ footer a:hover {
     z-index: 1; 
 }
 
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

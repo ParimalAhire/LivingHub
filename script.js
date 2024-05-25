@@ -35,3 +35,36 @@ function filterHostels() {
 
 // Event listener for keyup event on search input
 document.getElementById('search-bar').addEventListener('keyup', filterHostels);
+
+// index page
+document.addEventListener('DOMContentLoaded', function() {
+    updateNavBar();
+
+    function updateNavBar() {
+        const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+        const userName = localStorage.getItem('userName');
+
+        const navLinks = document.getElementById('nav-links');
+        const authLink = document.getElementById('auth-link');
+
+        if (isLoggedIn && userName) {
+            // Remove the "Sign Up / Login" link if present
+            if (authLink) {
+                authLink.remove();
+            }
+
+            // Add the profile link
+            const profileLink = document.createElement('li');
+            profileLink.innerHTML = `<a href="profile.html">${userName}'s Profile</a>`;
+            navLinks.appendChild(profileLink);
+        } else {
+            // If not logged in, ensure the "Sign Up / Login" link is present
+            if (!authLink) {
+                const newAuthLink = document.createElement('li');
+                newAuthLink.id = 'auth-link';
+                newAuthLink.innerHTML = '<a href="auth.html" id="auth-button">Sign Up / Login</a>';
+                navLinks.appendChild(newAuthLink);
+            }
+        }
+    }
+});
