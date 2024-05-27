@@ -8,7 +8,6 @@ function showLoginForm() {
     document.getElementById('login-form-container').style.display = 'block';
 }
 
-// Hardcoded login credentials
 const predefinedUsers = [
     {
         email: 'ahire.parimal18@gmail.com',
@@ -41,7 +40,6 @@ document.getElementById('signup-form').addEventListener('submit', function(event
     const email = document.getElementById('signup-email').value;
     const password = document.getElementById('signup-password').value;
 
-    // Simulate user registration by adding to predefined users
     predefinedUsers.push({ name, email, password });
 
     localStorage.setItem('isLoggedIn', 'true');

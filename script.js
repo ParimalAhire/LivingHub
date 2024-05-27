@@ -10,24 +10,6 @@ function toggleContactForm() {
     }
 }
 
-// Function to filter hostels based on search input
-function filterHostels() {
-    var input = document.getElementById('search-bar');
-    var filter = input.value.toUpperCase();
-    var hostels = document.querySelectorAll('.facility');
-
-    for (var i = 0; i < hostels.length; i++) {
-        var h3 = hostels[i].querySelector('h3');
-        var txtValue = h3.textContent || h3.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            hostels[i].style.display = "";
-        } else {
-            hostels[i].style.display = "none";
-        }
-    }
-}
-
-// Event listener for keyup event on search input
 document.getElementById('search-bar').addEventListener('keyup', filterHostels);
 
 function toggleContactForm() {
@@ -42,7 +24,6 @@ function toggleContactForm() {
     }
 }
 
-// Function to filter hostels based on search input
 function filterHostels() {
     var input = document.getElementById('search-bar');
     var filter = input.value.toUpperCase();
@@ -59,7 +40,7 @@ function filterHostels() {
     }
 }
 
-// Event listener for keyup event on search input
+
 document.getElementById('search-bar').addEventListener('keyup', filterHostels);
 
 function toggleMenu() {
@@ -94,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const navLinks = document.getElementById('nav-links');
         
-        // Clear only authentication-related links
+
         const authLink = document.getElementById('auth-link');
         const profileLink = document.getElementById('profile-link');
         const logoutLink = document.getElementById('logout-link');
@@ -109,19 +90,19 @@ document.addEventListener('DOMContentLoaded', function() {
             profileLi.innerHTML = `<a href="profile.html">Profile</a>`;
             navLinks.appendChild(profileLi);
 
-            // Add Logout Link
+
             const logoutLi = document.createElement('li');
             logoutLi.id = 'logout-link';
             logoutLi.innerHTML = `<a href="#" id="logout-button">Logout</a>`;
             navLinks.appendChild(logoutLi);
 
-            // Add Event Listener to Logout Button
+  
             document.getElementById('logout-button').addEventListener('click', function(event) {
                 event.preventDefault();
                 logout();
             });
         } else {
-            // Add Auth Link (Sign Up / Login)
+  
             const authLi = document.createElement('li');
             authLi.id = 'auth-link';
             authLi.innerHTML = '<a href="auth.html" id="auth-button">Sign Up / Login</a>';
@@ -147,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (user) {
             localStorage.setItem('isLoggedIn', 'true');
             localStorage.setItem('userName', user.name);
-            updateNavBar(); // Update the navigation bar
+            updateNavBar(); 
             window.location.href = 'index.html';
         } else {
             alert('Invalid login credentials');
@@ -161,12 +142,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const email = document.getElementById('signup-email').value;
         const password = document.getElementById('signup-password').value;
 
-        // Simulate user registration by adding to predefined users
+
         predefinedUsers.push({ name, email, password });
 
         localStorage.setItem('isLoggedIn', 'true');
         localStorage.setItem('userName', name);
-        updateNavBar(); // Update the navigation bar
+        updateNavBar(); 
         window.location.href = 'index.html';
     });
 });

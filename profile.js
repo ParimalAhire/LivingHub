@@ -4,9 +4,8 @@ document.getElementById('profile-form').addEventListener('submit', function(even
     const name = document.getElementById('profile-name').value;
     const email = document.getElementById('profile-email').value;
 
-    // Update user profile information
     localStorage.setItem('userName', name);
-    // Assume user email is updated on the server
+
     alert('Profile updated successfully!');
 });
 
