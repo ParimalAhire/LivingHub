@@ -46,5 +46,5 @@ document.getElementById('signup-form').addEventListener('submit', function(event
 
     localStorage.setItem('isLoggedIn', 'true');
     localStorage.setItem('userName', name);
-    window.location.href = 'index.html';
+    window.location.href = 'profile.html';
 });

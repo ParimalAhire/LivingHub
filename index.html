@@ -12,7 +12,7 @@
     <header>
         <!-- Navigation -->
         <nav id="desktop-nav">
-            <div class="logo">LivingHub</div>
+            <div class="logo" onclick="location.href='index.html';">LivingHub</div>
             <ul class="nav-links" id="nav-links">
                 <li><a href="hostelListing.html">Hostel</a></li>
                 <li><a href="messListing.html">Mess</a></li>
@@ -20,12 +20,28 @@
                 <li><a href="#contact">Contact</a></li>
                 <li id="auth-link"><a href="auth.html" id="auth-button">Sign Up / Login</a></li>
             </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+        </nav>
+
+        <nav id="hamburger-nav">
+            <div class="logo">Living Hub</div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+                <div class="menu-links">
+                    <ul>
+                        <li><a href="hostelListing.html" onclick="toggleMenu()">Hostel</a></li>
+                        <li><a href="messListing.html" onclick="toggleMenu()">Mess</a></li>
+                        <li><a href="#more-info" onclick="toggleMenu()">More-Info</a></li>
+                        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                        <li><a href="auth.html" onclick="toggleMenu()">Sign Up / Login</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
+        
     </header>
 
     <section class="site-info" id="site-info">
@@ -42,19 +58,19 @@
         <h2 class="section-title">Featured Hostels</h2>
         <div class="facilities-listing">
             <div class="facility">
-                <img src="assets/dhanyraj.jpg" alt="DNYANRAJ BOYS HOSTEL">
+                <img src="assets/hostel1.jpg" alt="DNYANRAJ BOYS HOSTEL">
                 <h3>DNYANRAJ BOYS HOSTEL</h3>
                 <p>Facilities: WiFi facilities, 3 students per 2 rooms, mess located on the ground floor.</p>
             </div>
             <div class="facility">
-                <img src="assets/hostel-2.jpg" alt="Jai Boys Hostel">
+                <img src="assets/hostel2.jpg" alt="Jai Boys Hostel">
                 <h3>Jai Boys Hostel</h3>
                 <p>Facilities: WiFi, washing machine, 24 hr RO water, study table, hot water.</p>
             </div>
             <div class="facility">
                 <img src="assets/hostel3.jpg" alt="Rajmata Girls Hostel">
                 <h3>Rajmata Girls Hostel</h3>
-                <p>Facilities: High-speed WiFi, comfortable beds, clean drinking water, washing machine, 24/7 camera surveillance, 24/7 parents response line, professional housekeeping, food mess, wooden furnished cupboard.</p>
+                <p>Facilities: High-speed WiFi, comfortable beds, clean drinking water, washing machine.</p>
             </div>
         </div>
     </section>
@@ -63,7 +79,7 @@
         <h2 class="section-title">Featured Mess</h2>
         <div class="facilities-listing">
             <div class="facility">
-                <img src="assets/mom-kitchen.jpg" alt="Mom's Kitchen">
+                <img src="assets/mess1.jpg" alt="Mom's Kitchen">
                 <h3>Mom's Kitchen</h3>
                 <p>Facilities: Clean drinking water, both veg and non-veg options, daily side sweet dish.</p>
             </div>
