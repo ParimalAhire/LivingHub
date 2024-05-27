@@ -605,7 +605,7 @@ footer a:hover {
 
 /* Mess Details Page Styling */
 
-#mess-details-container {
+#mess-details-container ,#hostel-details-container{
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
@@ -614,14 +614,14 @@ footer a:hover {
     border-radius: 8px;
 }
 
-.mess-details-container {
+.mess-details-container, .hostel-details-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.mess-title {
+.mess-title , .hostel-title{
     font-size: 36px;
     color: #333;
     margin-bottom: 20px;
@@ -635,7 +635,7 @@ footer a:hover {
     margin-bottom: 20px;
 }
 
-.mess-image {
+.mess-image, .hostel-image {
     max-width: 50%;
     height: auto;
     border-radius: 8px;

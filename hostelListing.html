@@ -6,6 +6,7 @@
     <title>Hostel Listings</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="assets/LivingHub.png">
+</head>
 <body>
     <header>
         <!-- Navigation -->
@@ -38,7 +39,6 @@
                 </div>
             </div>
         </nav>
-        
     </header>
 
     <main>
@@ -55,21 +55,21 @@
                 <h3>Dnyanraj Boys Hostel</h3>
                 <p>WiFi, 3 students per 2 rooms, mess on the ground floor</p>
                 <p></p>
-                <button>View Details</button>
+                <button onclick="navigateToHostelDetails('dnyanraj-boys-hostel')">View Details</button>
             </div>
             <div class="facility">
                 <img src="assets/hostel2.jpg" alt="Jai Boys Hostel">
                 <h3>Jai Boys Hostel</h3>
                 <p>WiFi, washing machine, 24 hr RO water, study table, hot water</p>
                 <p></p>
-                <button>View Details</button>
+                <button onclick="navigateToHostelDetails('jai-boys-hostel')">View Details</button>
             </div>
             <div class="facility">
                 <img src="assets/hostel3.jpg" alt="Rajmata Girls Hostel">
                 <h3>Rajmata Girls Hostel</h3>
                 <p>High-speed WiFi, comfortable beds, clean drinking water</p>
                 <p></p>
-                <button>View Details</button>
+                <button onclick="navigateToHostelDetails('rajmata-girls-hostel')">View Details</button>
             </div>
             <!-- Add more hostel listings as needed -->
         </section>
@@ -85,5 +85,11 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        function navigateToHostelDetails(hostelName) {
+            // Redirect to the hostel details page with the hostel name as a query parameter
+            window.location.href = `hostelDetails.html?hostel=${hostelName}`;
+        }
+    </script>
 </body>
 </html>
