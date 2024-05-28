@@ -27,7 +27,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
     if (user) {
         localStorage.setItem('isLoggedIn', 'true');
         localStorage.setItem('userName', user.name);
-        window.location.href = 'index.html';
+        window.location.href = 'profile.html';
     } else {
         alert('Invalid login credentials');
     }

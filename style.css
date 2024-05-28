@@ -343,8 +343,9 @@ section p, section h2 {
     display: flex;
     justify-content: space-between;
     background-color: #e6eff7;
-    margin: 0 6rem;
+    margin: 10vh 6rem;
     padding: 0;
+
 }
 
 .how-it-works, .faq {
